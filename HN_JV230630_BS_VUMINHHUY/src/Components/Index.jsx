@@ -63,7 +63,6 @@ export default function Miniproject() {
         setTodos(newTodos);
         setJob("");
     }
-
     return (
         <div>
             <section className="vh-70 gradient-custom">
@@ -73,32 +72,10 @@ export default function Miniproject() {
                         <div className="col col-xl-10">
                             <div className="card bg-danger">
                                 <div className="card-body p-5">
-                                    <h1 style={{ marginBottom: 10 }}>
+                                    <h1 style={{ marginBottom: 10, color: "white" }}>
                                         TODO LIST
                                     </h1>
-                                    <h4 style={{ marginBottom: 40 }}>Get thing done,one item at a time</h4>
-                                    <form
-                                        className="d-flex justify-content-center align-items-center mb-4"
-                                        onSubmit={handleSubmit}
-                                    >
-                                        <div className="flex-fill">
-                                            <input
-                                                type="text" id="form2"
-                                                className="form-control"
-                                                onChange={(e) => setJob(e.target.value)}
-                                                placeholder='Type to Todo List'
-                                                value={job}
-                                                ref={inputRef}
-                                            />
-
-                                        </div>
-                                        <button
-                                            type="submit"
-                                            className="btn btn-outline-warning ms-2"
-                                        >
-                                            Save Item
-                                        </button>
-                                    </form>
+                                    <h4 style={{ marginBottom: 40, color: "white" }}>Get thing done,one item at a time</h4>
 
                                     <div className="tab-content">
                                         <div className="tab-pane fade show active">
@@ -149,8 +126,33 @@ export default function Miniproject() {
                                                     })
                                                 }
                                             </ul>
+
                                         </div>
                                     </div>
+                                    <p className='mt-4 fs-4' style={{ color: "white" }}>Add to the todo list</p>
+                                    <form
+                                        className="d-flex justify-content-center align-items-center mb-4"
+                                        onSubmit={handleSubmit}
+                                    >
+                                        <div className="flex-fill">
+                                            <input
+                                                type="text" id="form2"
+                                                className="form-control p-4"
+                                                onChange={(e) => setJob(e.target.value)}
+                                                placeholder='Type to Todo List'
+                                                value={job}
+                                                ref={inputRef}
+                                            />
+
+                                        </div>
+                                        <button
+                                            type="submit"
+                                            className="btn btn-outline-warning ms-2 p-3"
+                                        >
+                                            Save Item
+                                        </button>
+                                    </form>
+
                                 </div>
                             </div>
                         </div>
